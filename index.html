@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume</title>
+    <style>
+        
+        /* Your CSS styles */
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #bebebe;
+        }
+
+        .main-section {
+            width: 210mm;
+            height: 297mm;
+            background-color: white;
+            margin: 0 auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+        }
+
+        .main-section .left-part {
+            width: 40%;
+            height: 100%;
+            background-color: #F4F4F4;
+            padding: 2.8rem;
+        }
+
+        .left-part .photo-container {
+            width: 240px;
+            height: 250px;
+        }
+
+        .left-part .photo-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: 1rem solid white;
+            box-shadow: rgba(0, 128, 255, 0.2) 0px 8px 24px;
+        }
+
+        .title {
+            font-family: 'Public Sans', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: 0.6rem;
+            background-color: #4b4b48;
+            color: white;
+            text-align: center;
+            margin: 1.4rem 0;
+        }
+
+        .contact-container {
+            margin-bottom: 2.2rem;
+        }
+
+        .contact-container .contact-list {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-family: 'Lato', sans-serif;
+            color: #444440;
+            font-size: 1rem;
+        }
+
+        .education-container {
+            margin-bottom: 2.2rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .education-container .course {
+            margin-bottom: 1rem;
+            color: #414042;
+        }
+
+        .education-container .education-title {
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: .3rem;
+        }
+
+        .education-container .college-name {
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .education-container .education-date {
+            font-size: 0.9rem;
+        }
+
+        .skills-container .skill {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.6rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .skills-container .skill .right-skill .outer-layer {
+            background-color: #BBBBBB;
+            height: 0.4rem;
+            width: 5rem;
+            border-radius: 0.4rem;
+        }
+
+        .skills-container .skill .right-skill .inner-layer {
+            background-color: #3D3D3D;
+            height: 100%;
+            border-radius: inherit;
+        }
+
+        .banner {
+            position: relative;
+        }
+
+        .qr-code {
+            position: absolute;
+            top: 5px;
+            right: 5%;
+        }
+
+        .qr-code img {
+            width: 100px;
+            height: auto;
+            border: 2px solid #fff;
+            border-radius: 5px;
+        }
+
+        .right-part {
+            padding: 2.8rem;
+        }
+
+        .right-part .banner {
+            font-family: 'Open Sans', sans-serif;
+            color: #4D4D4F;
+            margin-bottom: 2.2rem;
+        }
+
+        .right-part .banner .firstname {
+            font-size: 4rem;
+        }
+
+        .right-part .banner .lastname {
+            font-size: 4rem;
+            font-weight: 400;
+            letter-spacing: 0.5rem;
+            margin-top: -1rem;
+        }
+
+        .right-part .banner .position {
+            letter-spacing: 0.3rem;
+            margin-top: -0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .work-container {
+            margin-top: 5rem;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .work-container .work:not(:last-child) {
+            margin-bottom: 1.8rem;
+        }
+
+        .work-container .work .job-date {
+            display: flex;
+            justify-content: space-between;
+            color: #4D4D4F;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .work-container .work .company-name {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #4D4D4F;
+        }
+
+        .work-container .work .work-text {
+            color: #737373;
+            font-size: 0.8rem;
+            text-align: justify;
+            line-height: 1rem;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main-section">
+        <div class="left-part">
+            <div class="photo-container">
+                <img src="profileL.png" alt="">
+            </div>
+            <div class="contact-container">
+                <h2 class="title">Hubungi Saya</h2>
+                <div class="contact-list">
+                    <div class="icon-container">
+                        <i class="bi bi-house-door-fill"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p>Banjar, Jawa Barat, Indonesia</p>
+                    </div>
+                </div>
+                <div class="contact-list">
+                    <div class="icon-container">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p>andika57y@gemail.com</p>
+                    </div>
+                </div>
+                <div class="contact-list">
+                    <div class="icon-container">
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p>085624553247</p>
+                    </div>
+                </div>
+                <div class="contact-list">
+                    <div class="icon-container">
+                        <i class="bi bi-instagram"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p>@aandika.81</p>
+                    </div>
+                </div>
+                <div class="contact-list">
+                    <div class="icon-container">
+                        <i class="bi bi-github"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p>github.com/aandika-81</p>
+                    </div>
+                </div>
+            </div>
+            <div class="education-container">
+                <h2 class="title">Pendidikan</h2>
+                <div class="course">
+                    <h2 class="education-title">Sekolah Dasar (SD)</h2>
+                    <h5 class="college-name">SDN 4 KUJANGSARI</h5>
+                    <p class="education-date">2013 - 2018</p>
+                </div>
+                <div class="course">
+                    <h2 class="education-title">Sekolah Menengah Pertama (SMP)</h2>
+                    <h5 class="college-name">SMPN 8 BANJAR</h5>
+                    <p class="education-date">2019 - 2021</p>
+                </div>
+                <div class="course">
+                    <h2 class="education-title">Sekolah Menengah Kejuruan (SMK)</h2>
+                    <h5 class="college-name">SMKN 3 BANJAR</h5>
+                    <p class="education-date">2021 - 2024</p>
+                </div>
+                <div class="skills-container">
+                    <h2 class="title">SEKILLS</h2>
+                    <div class="skill">
+                        <div class="left-skill">
+                            <p>Pemrograman</p>
+                        </div>
+                        <div class="right-skill">
+                            <div class="outer-layer">
+                                <div class="inner-layer" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="left-skill">
+                            <p>Desain aplikasi</p>
+                        </div>
+                        <div class="right-skill">
+                            <div class="outer-layer">
+                                <div class="inner-layer" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="left-skill">
+                            <p>Analisis sistem</p>
+                        </div>
+                        <div class="right-skill">
+                            <div class="outer-layer">
+                                <div class="inner-layer" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+        <div class="banner">
+            <div class="qr-code">
+                <img src="qrwa.jpeg" alt="QR WhatsApp">
+                <p> WhatsApp me</p>
+            </div>
+            <div class="right-part">
+                <div class="banner">
+                    <h1 class="firstname">Andika</h1>
+                    <p class="work-text">Saya adalah lulusan SMK yang penuh semangat untuk memulai karier di dunia kerja. Meskipun saya belum memiliki pengalaman kerja formal, saya telah memperoleh keterampilan praktis dan pengalaman dalam kerja tim melalui pendidikan di SMK. Saya siap untuk terus belajar dan berkembang dalam karier saya, serta memberikan kontribusi positif dalam lingkungan kerja yang saya masuki.</p>
+                </div>
+            <style>
+                .work-container .title {
+    text-align: center; /* Membuat tulisan "Pengalaman" menjadi berada di tengah */
+}
+            </style>
+                <div class="work-container">
+                    <h2 class="title text-left">Pengalaman</h2>
+                    <div class="work">
+                        <div class="job-date">
+                            <p class="job">Praktik Kerja Lapangan</p>
+                            <p class="date">2023</p>
+                        </div>
+                        <h2>D'AZAM COMPUTER</h2>
+                        <div class="job-location">
+                            <p class="job">Jl. Jend. Sudirman No.250, Nagrak, Kec. Ciamis, Kabupaten Ciamis, Jawa Barat 46211.</p>
+                        </div>
+                        <p class="job">Selama masa praktik, saya bertanggung jawab atas instalasi sistem operasi Windows, memberikan layanan perbaikan untuk printer, dan melakukan proses bongkar pasang PC. Ini memberikan saya kesempatan untuk mengasah keterampilan teknis saya dan bekerja secara langsung dengan peralatan komputer.</p>
+                    </div>
+                    <div class="work">
+                        <div class="job-date">
+                            <p class="job">Pengalaman Praktik di Sekolah</p>
+                            <p class="date">2021-2024</p>
+                        </div>
+                        <h2>SMKN 3 BANJAR</h2>
+                        <div class="job-location">
+                            <p class="job">Jl. Julaeni, Langensari, Kec. Langensari, Kota Banjar, Jawa Barat 46324.</p>
+                        </div>
+                        <p class="job">Selama praktik di sekolah, saya terlibat dalam pengembangan aplikasi web APM, dimana saya ikut serta dalam proses desain dan pembuatan aplikasi web, serta pembuatan aplikasi web galeri foto. Pengalaman ini memberikan saya wawasan yang berharga dalam pengembangan aplikasi web serta meningkatkan keterampilan desain saya.</p>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <h2 class="title">Keterampilan</h2>
+                    <div class="skill">
+                        <div class="left-skill">
+                            <p>Tanggung Jawab</p>
+                        </div>
+                        <div class="right-skill">
+                            <div class="outer-layer">
+                                <div class="inner-layer" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="left-skill">
+                            <p>Kreativitas dan Solusi</p>
+                        </div>
+                        <div class="right-skill">
+                            <div class="outer-layer">
+                                <div class="inner-layer" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="left-skill">
+                            <p>Solidaritas Tim</p>
+                        </div>
+                        <div class="right-skill">
+                            <div class="outer-layer">
+                                <div class="inner-layer" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+    </section>
+</body>
+
+</html>
